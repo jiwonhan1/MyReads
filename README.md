@@ -2,6 +2,8 @@
 
 You can build your book shelf by using Book API.
 
+<img src="assets/Screenshot.png" width="500px" height="500px"/>
+
 ## React
 
 Based on React fundamentals, I focused on setting states using React Hooks and displaying them in an efficient way.
