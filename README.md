@@ -2,7 +2,7 @@
 
 You can build your book shelf by using Book API.
 
-<img src="/assets/Screenshot.png" width="500px" height="500px"/>
+<img src="src/assets/Screenshot.png" width="500px" height="500px"/>
 
 ## React
 
