@@ -2,18 +2,17 @@ import React from "react";
 
 const BookDetails = (props) => {
   const book = props.book;
-  console.log(props.book);
+  console.log(book);
   return (
     <React.Fragment>
       <li>
         <div className="book">
-          <div className="book-top" style={{ border: "2px solid blue" }}>
+          <div className="book-top">
             <div
               className="book-cover"
               style={{
                 width: 135,
                 height: 193,
-                border: "2px solid red",
                 backgroundImage: `url(${
                   book.imageLinks ? book.imageLinks.thumbnail : null
                 })`,

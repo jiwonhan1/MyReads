@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BookDetails from "./Book";
+import BookDetails from "./BookDetails";
 import * as BooksAPI from "../BooksAPI";
-import BooksApp from "../App";
 
 const SearchPage = (props) => {
   const [query, setQuery] = React.useState("");

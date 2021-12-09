@@ -168,12 +168,12 @@ button:active {
 
 .book-shelf-changer {
   position: absolute;
-  right: 0;
-  bottom: -10px;
+  right: 0px;
+  bottom: 10px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #60ac5d;
+  background: #8b4513;
   background-image: url("./icons/arrow-drop-down.svg");
   background-repeat: no-repeat;
   background-position: center;
