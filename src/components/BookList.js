@@ -15,8 +15,11 @@ const BooksList = (props) => {
   };
 
   const handleBookShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf).then(getBooks());
+    BooksAPI.update(book, shelf)
+      .then(() => getBooks())
+      .then(() => setShelf({ ...shelf }));
   };
+
   if (shelf) {
     return (
       <React.Fragment>

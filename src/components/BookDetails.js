@@ -2,7 +2,6 @@ import React from "react";
 
 const BookDetails = (props) => {
   const book = props.book;
-  console.log(book);
   return (
     <React.Fragment>
       <li>

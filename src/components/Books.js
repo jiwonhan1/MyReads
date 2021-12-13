@@ -6,7 +6,6 @@ const Books = (props) => {
   const [current_reading, setCurrentReading] = React.useState([]);
   const [want_to_read, setWantToRead] = React.useState([]);
   const [read, setRead] = React.useState([]);
-  const [test, setTest] = React.useState(false);
 
   const classifyBooks = () => {
     const currentReadings = books.filter(
