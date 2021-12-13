@@ -27,7 +27,9 @@ const BooksList = (props) => {
           <Books books={shelf} handleBookShelf={handleBookShelf.bind(this)} />
         </div>
         <div className="open-search">
-          <Link to="/search">Add a book</Link>
+          <Link to="/search">
+            <button className="open-search">+</button>
+          </Link>
         </div>
       </React.Fragment>
     );

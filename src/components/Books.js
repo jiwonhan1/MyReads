@@ -28,13 +28,6 @@ const Books = (props) => {
     [books]
   );
 
-  React.useEffect(
-    () => {
-      console.log("test");
-    },
-    [current_reading, want_to_read, read]
-  );
-
   const renderShelf = (books, title) => {
     return (
       <React.Fragment>

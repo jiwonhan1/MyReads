@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import BookDetails from "./BookDetails";
 import * as BooksAPI from "../BooksAPI";
 
@@ -20,6 +20,8 @@ const SearchPage = (props) => {
     );
   };
 
+  const history = useHistory();
+
   const handleBookShelf = (book, shelf) => {
     BooksAPI.update(book, shelf)
       .then(() =>
@@ -27,7 +29,10 @@ const SearchPage = (props) => {
           ? alert(`${book.title} has benn added to your shelf!`)
           : null
       )
-      .catch(() => alert("Something went wrong!"));
+      .then(() => history.push("/"))
+      .catch(() =>
+        alert("Something went wrong!").then(() => history.push("/"))
+      );
   };
 
   const renderSearchResult = () => {
