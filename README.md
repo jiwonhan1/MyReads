@@ -1,7 +1,5 @@
 # MyReads Project
 
-You can build your book shelf by using Book API.
-
 <img src="src/assets/Screenshot.png" width="700px" height="400px"/>
 
 ## React
