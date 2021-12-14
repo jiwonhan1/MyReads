@@ -4,6 +4,8 @@ import BookDetails from "./BookDetails";
 import * as BooksAPI from "../BooksAPI";
 
 const SearchPage = (props) => {
+  const current_shelf = props.current_shelf;
+  console.log(current_shelf);
   const [query, setQuery] = React.useState("");
   const [books, setBooks] = React.useState([]);
 
@@ -14,10 +16,27 @@ const SearchPage = (props) => {
   }, []);
 
   const handleUpdateQuery = (query) => {
-    BooksAPI.search(query).then(
-      (books) => (books ? setBooks(books) : setBooks([])),
-      setQuery(query)
-    );
+    BooksAPI.search(query).then((books) => {
+      console.log(books);
+      if (!Array.isArray(books)) {
+        setBooks([]);
+      } else {
+        books.map((book) => {
+          let thisBookInshelf = current_shelf.find(
+            (item) => item.id == book.id
+          );
+          if (thisBookInshelf) {
+            book.shelf = thisBookInshelf.shelf;
+            return book;
+          } else {
+            book.shelf = "none";
+            return book;
+          }
+        });
+        setBooks(books);
+      }
+      setQuery(query);
+    });
   };
 
   const history = useHistory();
@@ -29,15 +48,16 @@ const SearchPage = (props) => {
           ? alert(`${book.title} has benn added to your shelf!`)
           : null
       )
-      .then(() => history.push("/"))
+      // .then(() => history.push("/"))
       .catch(() =>
         alert("Something went wrong!").then(() => history.push("/"))
       );
   };
 
   const renderSearchResult = () => {
+    console.log(books);
     if (query) {
-      return books.error ? (
+      return books.length == 0 ? (
         <div>No results Found</div>
       ) : (
         books.map((book, index) => {
