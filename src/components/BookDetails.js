@@ -5,7 +5,7 @@ const BookDetails = (props) => {
   const book = props.book;
   return (
     <React.Fragment>
-      <Grid is_flex_column width={400} height={260}>
+      <Grid is_flex_column width={350} height={260}>
         <Image
           src={book.imageLinks ? book.imageLinks.thumbnail : null}
           width={135}
