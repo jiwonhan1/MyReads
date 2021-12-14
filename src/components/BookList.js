@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Grid, Button } from "../elements";
 import Books from "./Books";
+import { Link } from "react-router-dom";
 import * as BooksAPI from "../BooksAPI";
 
 const BooksList = (props) => {
@@ -23,14 +24,13 @@ const BooksList = (props) => {
   if (shelf) {
     return (
       <React.Fragment>
-        <div className="list-books-content">
+        {/* <div className="list-books-content"> */}
+        <Grid margin="10px">
           <Books books={shelf} handleBookShelf={handleBookShelf.bind(this)} />
-        </div>
-        <div className="open-search">
           <Link to="/search">
-            <button className="open-search">+</button>
+            <Button is_float text="+" />
           </Link>
-        </div>
+        </Grid>
       </React.Fragment>
     );
   }

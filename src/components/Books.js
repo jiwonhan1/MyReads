@@ -1,5 +1,6 @@
 import React from "react";
 import BookDetails from "./BookDetails";
+import { Grid, Text } from "../elements";
 import * as BooksAPI from "../BooksAPI";
 const Books = (props) => {
   const books = props.books;
@@ -32,9 +33,11 @@ const Books = (props) => {
     return (
       <React.Fragment>
         <div className="bookshelf">
-          <h2 className="bookshelf-title">{title}</h2>
-          <div className="bookshelf-books">
-            <ol className="books-grid">
+          <Text bold size="20px" border_bottom>
+            {title}
+          </Text>
+          <Grid center>
+            <Grid is_flex>
               {books.map((book, index) => (
                 <BookDetails
                   key={index}
@@ -42,8 +45,8 @@ const Books = (props) => {
                   handleBookShelf={props.handleBookShelf.bind(this)}
                 />
               ))}
-            </ol>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </React.Fragment>
     );
