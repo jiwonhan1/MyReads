@@ -48,7 +48,7 @@ const SearchPage = (props) => {
           ? alert(`${book.title} has benn added to your shelf!`)
           : null
       )
-      // .then(() => history.push("/"))
+      .then(() => history.push("/"))
       .catch(() =>
         alert("Something went wrong!").then(() => history.push("/"))
       );
