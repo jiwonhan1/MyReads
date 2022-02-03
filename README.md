@@ -1,11 +1,13 @@
 # MyReads Project
 
+MyReads is bookshelf that displays the books based on status you have set.
+
 <img src="src/assets/Screenshot.png" width="700px" height="400px"/>
 
 ## React
 
 Based on React fundamentals, I focused on setting states using React Hooks and displaying them in an efficient way. <br/>
-This app is the first of three projects required for [Udacity's React Nanodegree program](https://www.udacity.com/course/react-nanodegree--nd019).
+This app is the first project required for [Udacity's React Nanodegree program](https://www.udacity.com/course/react-nanodegree--nd019).
 
 ## Installation
 
