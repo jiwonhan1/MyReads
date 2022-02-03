@@ -1,6 +1,6 @@
 # MyReads Project
 
-MyReads is bookshelf that displays the books based on status you have set.
+MyReads is a bookshelf that displays the books based on status you have set.
 
 <img src="src/assets/Screenshot.png" width="700px" height="400px"/>
 
